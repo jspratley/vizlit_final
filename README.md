@@ -1,4 +1,4 @@
-vizlit_final
+Dracula Character Comparisons
 ============
 
 Final project for Visualizing Literature independent study.
@@ -18,3 +18,5 @@ Originally what I wanted to do was have some way of visualizing character simila
 same adjective, I wanted to show it.  I have yet to figure out how to do this, but I'm still fairly happy with
 the result, which is that a viewer can look at each major character in Dracula and figure out what they're like (or 
 what fate they had) based on the words surrounding them.  
+
+You can find the final product here: http://web.engr.illinois.edu/~spratle2/mp3.html
