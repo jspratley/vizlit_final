@@ -1,0 +1,509 @@
+{
+    "children": [
+        {
+            "children": [
+                {
+                    "name": "direful",
+                    "value": 0
+                },
+                {
+                    "name": "fearsome",
+                    "value": 0
+                },
+                {
+                    "name": "dreaded",
+                    "value": 0
+                },
+                {
+                    "name": "horrendous",
+                    "value": 0
+                },
+                {
+                    "name": "dread",
+                    "value": 0
+                },
+                {
+                    "name": "fearful",
+                    "value": 0
+                },
+                {
+                    "name": "horrific",
+                    "value": 0
+                },
+                {
+                    "name": "painful",
+                    "value": 0
+                },
+                {
+                    "name": "wicked",
+                    "value": 0
+                },
+                {
+                    "name": "unspeakable",
+                    "value": 0
+                },
+                {
+                    "name": "frightening",
+                    "value": 0
+                },
+                {
+                    "name": "dire",
+                    "value": 0
+                },
+                {
+                    "name": "abominable",
+                    "value": 0
+                },
+                {
+                    "name": "awful",
+                    "value": 0
+                },
+                {
+                    "name": "dreadful",
+                    "value": 0
+                },
+                {
+                    "name": "severe",
+                    "value": 0
+                },
+                {
+                    "name": "atrocious",
+                    "value": 0
+                },
+                {
+                    "name": "frightful",
+                    "value": 0
+                },
+                {
+                    "name": "terrible",
+                    "value": 0
+                },
+                {
+                    "name": "tremendous",
+                    "value": 0
+                }
+            ],
+            "name": "Count Dracula"
+        },
+        {
+            "children": [
+                {
+                    "name": "dear",
+                    "value": 0
+                },
+                {
+                    "name": "darling",
+                    "value": 0
+                },
+                {
+                    "name": "costly",
+                    "value": 0
+                },
+                {
+                    "name": "pricy",
+                    "value": 0
+                },
+                {
+                    "name": "beloved",
+                    "value": 0
+                },
+                {
+                    "name": "pricey",
+                    "value": 0
+                },
+                {
+                    "name": "earnest",
+                    "value": 0
+                },
+                {
+                    "name": "high-priced",
+                    "value": 0
+                },
+                {
+                    "name": "heartfelt",
+                    "value": 0
+                },
+                {
+                    "name": "near",
+                    "value": 0
+                },
+                {
+                    "name": "good",
+                    "value": 0
+                },
+                {
+                    "name": "devout",
+                    "value": 0
+                }
+            ],
+            "name": "Mina Harker"
+        },
+        {
+            "children": [
+                {
+                    "name": "concluding",
+                    "value": 0
+                },
+                {
+                    "name": "final",
+                    "value": 0
+                },
+                {
+                    "name": "last-place",
+                    "value": 0
+                },
+                {
+                    "name": "lowest",
+                    "value": 0
+                },
+                {
+                    "name": "last",
+                    "value": 0
+                },
+                {
+                    "name": "net",
+                    "value": 0
+                },
+                {
+                    "name": "terminal",
+                    "value": 0
+                },
+                {
+                    "name": "utmost",
+                    "value": 0
+                }
+            ],
+            "name": "Abraham Van Helsing"
+        },
+        {
+            "children": [
+                {
+                    "name": "pitiful",
+                    "value": 0
+                },
+                {
+                    "name": "miserable",
+                    "value": 0
+                },
+                {
+                    "name": "misfortunate",
+                    "value": 0
+                },
+                {
+                    "name": "pathetic",
+                    "value": 0
+                },
+                {
+                    "name": "inadequate",
+                    "value": 0
+                },
+                {
+                    "name": "short",
+                    "value": 0
+                },
+                {
+                    "name": "piteous",
+                    "value": 0
+                },
+                {
+                    "name": "wretched",
+                    "value": 0
+                },
+                {
+                    "name": "pitiable",
+                    "value": 0
+                },
+                {
+                    "name": "poor",
+                    "value": 0
+                },
+                {
+                    "name": "hapless",
+                    "value": 0
+                }
+            ],
+            "name": "Lucy Westenra"
+        },
+        {
+            "children": [
+                {
+                    "name": "upright",
+                    "value": 0
+                },
+                {
+                    "name": "beneficial",
+                    "value": 0
+                },
+                {
+                    "name": "right",
+                    "value": 0
+                },
+                {
+                    "name": "in_force",
+                    "value": 0
+                },
+                {
+                    "name": "undecomposed",
+                    "value": 0
+                },
+                {
+                    "name": "honest",
+                    "value": 0
+                },
+                {
+                    "name": "proficient",
+                    "value": 0
+                },
+                {
+                    "name": "dear",
+                    "value": 0
+                },
+                {
+                    "name": "respectable",
+                    "value": 0
+                },
+                {
+                    "name": "serious",
+                    "value": 0
+                },
+                {
+                    "name": "unspoiled",
+                    "value": 0
+                },
+                {
+                    "name": "adept",
+                    "value": 0
+                },
+                {
+                    "name": "expert",
+                    "value": 0
+                },
+                {
+                    "name": "practiced",
+                    "value": 0
+                },
+                {
+                    "name": "in_effect",
+                    "value": 0
+                },
+                {
+                    "name": "just",
+                    "value": 0
+                },
+                {
+                    "name": "effective",
+                    "value": 0
+                },
+                {
+                    "name": "sound",
+                    "value": 0
+                },
+                {
+                    "name": "estimable",
+                    "value": 0
+                },
+                {
+                    "name": "skilful",
+                    "value": 0
+                },
+                {
+                    "name": "ripe",
+                    "value": 0
+                },
+                {
+                    "name": "honorable",
+                    "value": 0
+                },
+                {
+                    "name": "unspoilt",
+                    "value": 0
+                },
+                {
+                    "name": "dependable",
+                    "value": 0
+                },
+                {
+                    "name": "skillful",
+                    "value": 0
+                },
+                {
+                    "name": "near",
+                    "value": 0
+                },
+                {
+                    "name": "salutary",
+                    "value": 0
+                },
+                {
+                    "name": "well",
+                    "value": 0
+                },
+                {
+                    "name": "safe",
+                    "value": 0
+                },
+                {
+                    "name": "secure",
+                    "value": 0
+                },
+                {
+                    "name": "good",
+                    "value": 0
+                }
+            ],
+            "name": "Jonathan Harker"
+        },
+        {
+            "children": [
+                {
+                    "name": "young",
+                    "value": 0
+                },
+                {
+                    "name": "vernal",
+                    "value": 0
+                },
+                {
+                    "name": "untested",
+                    "value": 0
+                },
+                {
+                    "name": "new",
+                    "value": 0
+                },
+                {
+                    "name": "untried",
+                    "value": 0
+                },
+                {
+                    "name": "youthful",
+                    "value": 0
+                },
+                {
+                    "name": "unseasoned",
+                    "value": 0
+                }
+            ],
+            "name": "John Seward"
+        },
+        {
+            "children": [
+                {
+                    "name": "quondam",
+                    "value": 0
+                },
+                {
+                    "name": "Old",
+                    "value": 0
+                },
+                {
+                    "name": "previous",
+                    "value": 0
+                },
+                {
+                    "name": "older",
+                    "value": 0
+                },
+                {
+                    "name": "sometime",
+                    "value": 0
+                },
+                {
+                    "name": "honest-to-goodness",
+                    "value": 0
+                },
+                {
+                    "name": "sure-enough",
+                    "value": 0
+                },
+                {
+                    "name": "former",
+                    "value": 0
+                },
+                {
+                    "name": "onetime",
+                    "value": 0
+                },
+                {
+                    "name": "one-time",
+                    "value": 0
+                },
+                {
+                    "name": "old",
+                    "value": 0
+                },
+                {
+                    "name": "honest-to-god",
+                    "value": 0
+                },
+                {
+                    "name": "erstwhile",
+                    "value": 0
+                }
+            ],
+            "name": "Arthur Holmwood"
+        },
+        {
+            "children": [
+                {
+                    "name": "boyfriend",
+                    "value": 0
+                },
+                {
+                    "name": "beau",
+                    "value": 0
+                },
+                {
+                    "name": "familiar",
+                    "value": 0
+                },
+                {
+                    "name": "swain",
+                    "value": 0
+                },
+                {
+                    "name": "buster",
+                    "value": 0
+                },
+                {
+                    "name": "associate",
+                    "value": 0
+                },
+                {
+                    "name": "mate",
+                    "value": 0
+                },
+                {
+                    "name": "companion",
+                    "value": 0
+                },
+                {
+                    "name": "comrade",
+                    "value": 0
+                },
+                {
+                    "name": "fellow",
+                    "value": 0
+                },
+                {
+                    "name": "dude",
+                    "value": 0
+                },
+                {
+                    "name": "young_man",
+                    "value": 0
+                },
+                {
+                    "name": "colleague",
+                    "value": 0
+                },
+                {
+                    "name": "confrere",
+                    "value": 0
+                }
+            ],
+            "name": "Quincey Morris"
+        }
+    ],
+    "name": "characters"
+}

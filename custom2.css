@@ -1,0 +1,38 @@
+body {
+  padding-top: 50px;
+}
+.greeting {
+  padding: 40px 15px;
+  text-align: center;
+  font-family: "Times New Roman";
+}
+
+#content {
+    margin:auto;
+}
+h1 {
+  font-family: "Times New Roman";
+}
+h3 {
+  font-family: "Times New Roman";
+}
+p  {
+  font-family: "Times New Roman";
+}
+
+.node circle {
+  cursor: pointer;
+  stroke: #5d1919;
+  stroke-width: 1.5px;
+}
+
+.node text {
+  font: 12px sans-serif;
+  pointer-events: none;
+  text-anchor: middle;
+}
+
+line.link {
+  stroke: #5d1919;
+  stroke-width: 1.5px;
+}

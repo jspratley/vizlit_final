@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Dracula Visualization</title>
+    <!-- Bootstrap for themes and such -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- custom CSS rules to make your visualization pretty! -->
+    <link rel="stylesheet" href="custom2.css" type="text/css" media="screen" />
+  </head>
+  <body>
+    <!-- Navigation bar -->
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Dracula Vocabulary</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">MP2</a></li>
+            <li class="active"><a href="#">MP3</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <!-- Main content -->
+    <div class="container" id="content">
+      <div class="greeting">
+        <h1>Dracula Character Comparisons</h1>
+      </div>
+      <div id="main">
+      </div>
+      <hr />
+      <div class="row">
+        <div id="about" class="col-md-6">
+          <h3>About this Chart</h3>
+          <p>Another hierarchical visualization, only this time it showcases character traits.  I first tagged every word in the book 
+          with its part of speech using the Stanford POS tagger.  Then, I picked out all of the adjectives that occurred in the same
+          sentence as a characters name, and put them in separate lists corresponding to each major character in Dracula.  My next 
+          step was to find the most frequently occurring adjective for each character, after which I used WordNet to find all of the
+          synonyms for that adjective and put them in a new list associated with each character.</p>
+          <p>Even with Stanford's POS tagger, the tagging itself wasn't perfect; occasionally the words used are nouns instead of 
+          adjectives.  But this happened rarely enough that I felt it was safe to leave it alone, and the nouns are still informative.</p>
+          <p>In the visualization, the adjectives are clustered around each character.  I'm
+          also working on a way to show links between common adjectives between characters.</p>
+        </div>
+        <div id="comments" class="col-md-6">
+          <div id="disqus_thread"></div>
+          <noscript>Please enable JavaScript to view
+            the <a href="http://disqus.com/?ref_noscript">comments powered by
+              Disqus.</a></noscript>
+          <a href="http://disqus.com" class="dsq-brlink">comments powered
+            by <span class="logo-disqus">Disqus</span></a>
+        </div>
+      </div>
+
+    </div><!-- /.container -->
+
+    <!-- Javascript code goes down here so the page loads quickly. -->
+
+    <!-- jQuery: DOM manipulations, AJAX, etc. Access with $. -->
+    <script src="http://code.jquery.com/jquery-1.10.1.js"></script>
+    <!-- d3.js: Visualization library. Access with d3. -->
+    <script src="http://d3js.org/d3.v3.js" charset="utf-8"></script>
+    <!-- underscore: Utility library. Access with _. -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <!-- Your Javascript code should go here. -->
+    <!--script type="text/javascript" src="index.js"></script>-->
+    <script type="text/javascript">
+     var width = 960,
+    height = 800,
+    root;
+
+	var force = d3.layout.force()
+		.linkDistance(90)
+		.charge(-110)
+		.gravity(.05)
+		.size([width, height])
+		.on("tick", tick);
+
+	var svg = d3.select("body").append("svg")
+		.attr("width", width)
+		.attr("height", height);
+
+	var link = svg.selectAll(".link"),
+		node = svg.selectAll(".node");
+
+	d3.json("data2.json", function(error, json) {
+		root = json;
+		update();
+	});
+
+	function update() {
+		var nodes = flatten(root),
+		links = d3.layout.tree().links(nodes);
+
+		// Restart the force layout.
+		force
+			.nodes(nodes)
+			.links(links)
+			.start();
+
+		// Update links.
+		link = link.data(links, function(d) { return d.target.id; });
+
+		link.exit().remove();
+
+		link.enter().insert("line", ".node")
+			.attr("class", "link");
+
+		// Update nodes.
+		node = node.data(nodes, function(d) { return d.id; });
+
+		node.exit().remove();
+
+		var nodeEnter = node.enter().append("g")
+			.attr("class", "node")
+			.on("click", click)
+			.call(force.drag);
+
+		nodeEnter.append("circle")
+			.attr("r", function(d) { return Math.sqrt(d.size) / 10 || 4.5; });
+
+		nodeEnter.append("text")
+			.attr("dy", ".35em")
+			.text(function(d) { return d.name; });
+
+		node.select("circle")
+			.style("fill", color);
+	}
+
+	function tick() {
+		link.attr("x1", function(d) { return d.source.x; })
+			.attr("y1", function(d) { return d.source.y; })
+			.attr("x2", function(d) { return d.target.x; })
+			.attr("y2", function(d) { return d.target.y; });
+
+		node.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+	}
+
+	function color(d) {
+		return d._children ? "#3182bd" // collapsed package
+			: d.children ? "#c6dbef" // expanded package
+			: "#d76a6a"; // leaf node
+	}
+
+// Toggle children on click.
+	function click(d) {
+		if (d3.event.defaultPrevented) return; // ignore drag
+		if (d.children) {
+			d._children = d.children;
+			d.children = null;
+		} else {
+			d.children = d._children;
+			d._children = null;
+		}
+		update();
+	}
+
+// Returns a list of all nodes under the root.
+	function flatten(root) {
+		var nodes = [], i = 0;
+
+	function recurse(node) {
+		if (node.children) node.children.forEach(recurse);
+		if (!node.id) node.id = ++i;
+		nodes.push(node);
+	}
+
+	recurse(root);
+	return nodes;
+}
+      </script>
+  </body>
+</html>
